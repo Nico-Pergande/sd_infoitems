@@ -11,8 +11,10 @@ With sd_infoitems you can improve the RP on your server. Whether instructions, l
 
 # Installation
 1. You have to create the item in your DB
-INSERT INTO `items` (name, label, `limit`) VALUES
-	('itemname', 'Itemlabel', 1);
+
+```
+INSERT INTO `items` (name, label, `limit`) VALUES ('itemname', 'Itemlabel', 1);
+```
 
 2. RegisterUsableItem
 ESX.RegisterUsableItem('itemname', function(source)
