@@ -19,10 +19,13 @@ INSERT INTO `items` (name, label, `limit`) VALUES ('itemname', 'Itemlabel', 1);
 <br>
 
 2. RegisterUsableItem
+
+```
 ESX.RegisterUsableItem('itemname', function(source)
   local xPlayer = ESX.GetPlayerFromId(source)
   TriggerClientEvent('infoitem:open', source, "Itemlabel", 'filename')
 end)
+```
 
 ‼️ The PDF File have to be in "sd_infoitems/ui/data" ‼️
 
