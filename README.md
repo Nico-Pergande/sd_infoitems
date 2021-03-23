@@ -1,5 +1,8 @@
-# sd_infoitems
----
+<h1 align="center">Hi 👋. Welcome to Squid-Development!</h1>
+<h3 align="center">Today I present: sd_infoitems</h3>
+
+<br>
+<br>
 
 # Description
 With sd_infoitems you can improve the RP on your server. Whether instructions, laws or event information. Just create a nice Google Docs document, export it as PDF and create an item. Now you can use such things directly ingame and save possible metagaming through sources like Discord or forums.
