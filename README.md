@@ -33,6 +33,9 @@ end)
 
 After step 1 + 2 you restart your server, go ingame and use the previously set item.
 
+<br>
+<br>
+
 ‼️ The PDF File have to be in "sd_infoitems/ui/data" ‼️
 
 ---
