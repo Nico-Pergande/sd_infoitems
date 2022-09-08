@@ -1,10 +1,3 @@
-local PlayerData = {}
-
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function(xPlayer)
-  PlayerData = xPlayer
-end)
-
 RegisterNetEvent('infoitem:open')
 AddEventHandler('infoitem:open', function(title, filename)
   SendNUIMessage({

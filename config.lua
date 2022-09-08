@@ -1,8 +1,7 @@
-Config = {}
+Cfg = Cfg or {}
 
-Config.ESX = '1' -- 1 = Items with maximal Amount | 2 = Items with Weight-System
-Config.AutoDB = true
+Cfg.Framework = 'qbCore' -- ESX / qbCore
 
-Config.Items = {
+Cfg.Items = {
   { itemName = "stgb", itemLabel = "Strafgesetzbuch", fileName = "stgb", maxAmount = "3", itemWeight = "" } -- Filename = Name of the Document which must be in "sd_infoitems/ui/data/"
 }

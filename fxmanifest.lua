@@ -6,15 +6,17 @@ description ''
 version '0.0.1'
 
 client_scripts {
-  'config.lua',
-  'client/clmain.lua'
+  'Cfg.lua',
+  'client/*.lua'
 }
+
+shared_scripts { 'config.lua' }
 
 server_scripts {
   '@async/async.lua',
   "@mysql-async/lib/MySQL.lua",
   'config.lua',
-  'server/svmain.lua'
+  'server/*.lua'
 }
 
 ui_page "ui/index.html"

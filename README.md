@@ -10,20 +10,34 @@ With sd_infoitems you can improve the RP on your server. Whether instructions, l
 ---
 
 # Installation
-1. You have to create the item in your DB
+1. You have to create the item in your DB if you use ESX
 
-```
-INSERT INTO `items` (name, label, `limit`) VALUES ('itemname', 'Itemlabel', 1);
+```sql
+INSERT INTO `items` (name, label, `limit`) VALUES ('stgb', 'Strafgesetzbuch', 1);
 ```
 
+If you use QBCore you have to create a new Item in your Core Resource ( Default: ``qb-core/shared/items.lua`` )
+
+```lua
+[‘stgb’] = {[‘name’] = ‘stgb’, [‘label’] = ‘Strafgesetzbuch’, [‘weight’] = 0, [‘type’] = ‘item’, [‘image’] = stgb.png’, [‘unique’] = false, [‘useable’] = true, [‘shouldClose’] = true, [‘combinable’] = nil, [‘description’] = ‘’},
+```
 <br>
 
-2. RegisterUsableItem
+2. RegisterUsableItem under ``server/sv_main.lua``
 
-```
-ESX.RegisterUsableItem('itemname', function(source)
+ESX example:
+```lua
+ESX.RegisterUsableItem('stgb', function(source)
   local xPlayer = ESX.GetPlayerFromId(source)
-  TriggerClientEvent('infoitem:open', source, "Itemlabel", 'filename')
+  TriggerClientEvent('infoitem:open', source, "Strafgesetzbuch", 'stgb')
+end)
+```
+
+QBCore example:
+```lua
+QBCore.Functions.CreateUseableItem('stgb', function(source, item)
+  local Player = QBCore.Functions.GetPlayer(source)
+  TriggerClientEvent('infoitem:open', source, "Strafgesetzbuch", 'stgb')
 end)
 ```
 
@@ -36,7 +50,7 @@ After step 1 + 2 you restart your server, go ingame and use the previously set i
 <br>
 <br>
 
-‼️ The PDF File have to be in "sd_infoitems/ui/data" ‼️
+‼️ The PDF File have to be in ``sd_infoitems/ui/data`` ‼️
 
 ---
 
