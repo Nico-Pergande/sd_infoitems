@@ -16,7 +16,7 @@ With sd_infoitems you can improve the RP on your server. Whether instructions, l
 INSERT INTO `items` (name, label, `limit`) VALUES ('stgb', 'Strafgesetzbuch', 1);
 ```
 
-If you use QBCore you have to create a new Item in your Core Resource (Default: ``qb-core/shared/items.lua``
+If you use QBCore you have to create a new Item in your Core Resource ( Default: ``qb-core/shared/items.lua`` )
 
 ```lua
 [‘stgb’] = {[‘name’] = ‘stgb’, [‘label’] = ‘Strafgesetzbuch’, [‘weight’] = 0, [‘type’] = ‘item’, [‘image’] = stgb.png’, [‘unique’] = false, [‘useable’] = true, [‘shouldClose’] = true, [‘combinable’] = nil, [‘description’] = ‘’},
